@@ -1,0 +1,109 @@
+
+<!-- <app-navbar></app-navbar> -->
+<body>
+    <button class="logout"> <a href="/login" style="color: white;">Logout</a></button>
+<div class="common">
+    <div id="home">
+        <!-- <h1>Hi Welcome {{item}}</h1> -->
+    </div>
+    
+        <div class="container">
+    
+            <form #register="ngForm" (submit)="GetFormData(register.value)" action="" id="form">
+                
+                <h1 style="text-decoration: solid;">Customer Details</h1>
+    
+                <div class="input-group">
+                   
+                    <label for="name" class="form-label">Name: </label>
+                    <input required minlength="5" class="form-control" type="text" id="name" name="name" placeholder="Username"  ngModel>
+                    <!-- <span *ngIf="name.invalid && name.touched " class="errormessage">Please Enter Your Name</span> -->
+                  </div>
+                <div class="input-group">
+                    <label class="form-label" for="email">Email: </label>
+                    <input required class="form-control" type="email" id="email" name="email" placeholder="EmailID" ngModel >
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="passwd">Password: </label>
+                    <input required class="form-control" type="password" id="passwd" name="passwd" placeholder="Password" ngModel>
+                </div>
+               
+                <div class="input-group">
+                    <label class="form-label" for="salary">Salary: </label>
+                    <input required class="form-control" type="text" id="salary" name="salary" placeholder="Salary" ngModel >
+                </div>
+                <div class="radio-group">
+                    <label class="radio-lable" for="male">Male </label>
+                   <input type="radio" name="gender" id="male"  ngModel value="male" >
+                    <label class="radio-lable" for="female">Femal</label>
+                   <input type="radio" name="gender" id="female"  ngModel value="female" >
+                   <br>
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="country" >Country</label>
+                    <select name="country" class="form-control" id="country" name="country"  placeholder="Country" ngModel >
+                  <option value="">Choose</option>
+                  <option>Argentina</option>
+                  <option value="India" selected>India</option>
+                  <option>China</option>
+                  <option>Canada</option>
+                  <option>Colombia</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                  </select>
+                </div><br>
+                <div class="input-group">
+                    <label class="form-label" for="contact">Contact: </label>
+                    <input required minlength="10" class="form-control" type="contact" id="contact" name="contact" placeholder="Contact" ngModel >
+                        
+                </div>
+                <input id="submit" type="submit" value="{{editMode ? 'Update Customer':' Add Customer'}}">
+        </form>
+            
+    
+        </div>
+  
+            
+    
+    <div>
+    <!-- <h1>Employee's Table</h1> -->
+    <table id="users">
+      <tr>
+        <th>#</th>
+        <th>UserName</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Country</th>
+        <th>Contact</th>
+        <th>Update</th>
+        <th>Edit</th>
+    
+      </tr>
+    <tr *ngIf="allcustomer.length < 1 && !isFetching ">
+      <td colspan="8">No Product Available!</td>
+    </tr>
+    <tr *ngIf="isFetching ">
+      <td colspan="8">Loading....</td>
+    </tr>
+      <tr *ngFor = "let row of allcustomer; index as i">
+        <!-- <td *ngFor = "let column of headers">
+          {{row[column]}}
+        </td> -->
+        <td>{{i+1}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.gender}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.salary}}</td>
+        <td>{{row.country}}</td>
+        <td>{{row.contact}}</td>
+        <td><button (click)="onDeleteCustomer(row.id)">Delete</button></td>
+      <td><button (click)="onEditCliked(row.id)" >Edit</button></td>
+      </tr>
+    
+    </table>
+    <br>
+    <input class="btn" type="submit" value="Delete All Customer" (click)="onDeleteAllCustomer()">
+</div>
+  </div>
+  </body>

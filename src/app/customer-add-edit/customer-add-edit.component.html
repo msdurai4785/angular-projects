@@ -1,0 +1,68 @@
+<body>
+    <div mat-dialog-content class="common" >
+
+        <div class="container">
+
+            <form #register="ngForm" (submit)="GetFormData(register.value)" action="" id="form">
+
+                <h1 class="heading">Customer Details</h1>
+
+                <div class="input-group">
+
+                    <label for="name" class="form-label">Name: </label>
+                    <input required minlength="5" class="form-control" type="text" id="name" name="name"
+                        placeholder="Username" ngModel>
+                    <!-- <span *ngIf="name.invalid && name.touched " class="errormessage">Please Enter Your Name</span> -->
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="email">Email: </label>
+                    <input required class="form-control" type="email" id="email" name="email" placeholder="EmailID"
+                        ngModel>
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="passwd">Password: </label>
+                    <input required class="form-control" type="password" id="passwd" name="passwd"
+                        placeholder="Password" ngModel>
+                </div>
+
+                <div class="input-group">
+                    <label class="form-label" for="salary">Salary: </label>
+                    <input required class="form-control" type="text" id="salary" name="salary" placeholder="Salary"
+                        ngModel>
+                </div>
+                <div class="radio-group">
+                    <label class="radio-lable" for="male">Male </label>
+                    <input type="radio" name="gender" id="male" ngModel value="male">
+                    <label class="radio-lable" for="female">Femal</label>
+                    <input type="radio" name="gender" id="female" ngModel value="female">
+                    <br>
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="country">Country</label>
+                    <select name="country" class="form-control" id="country" name="country" placeholder="Country"
+                        ngModel>
+                        <option value="">Choose</option>
+                        <option>Argentina</option>
+                        <option value="India" selected>India</option>
+                        <option>China</option>
+                        <option>Canada</option>
+                        <option>Colombia</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="form-label" for="contact">Contact: </label>
+                    <input required minlength="10" class="form-control" type="contact" id="contact" name="contact"
+                        placeholder="Contact" ngModel>
+
+                </div>
+                <!-- <input id="submit" type="submit"> -->
+                
+                <input id="submit" type="submit" value="{{editMode ? 'Update Customer':' Add Customer'}}">
+            </form>
+
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,186 @@
+.theme{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(121,32,153,1) 86%);
+    background-attachment: fixed;
+    margin:0px;
+    padding:70px;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(121,32,153,1) 86%);
+    background-attachment: fixed;
+    margin:0px;
+    padding:70px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#form{
+    width:400px;
+    margin:20vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:1px 30px;
+    margin:auto 20px 200px 400px ;
+}
+
+h1{
+    text-align: center;
+    color:#792099;
+}
+
+#form button{
+    background-color: #792099;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:5px;
+    margin:30px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:100%;
+    margin-bottom:20px ;
+}
+
+.input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    size: 0cm;
+}
+
+.input-group input{
+    border-radius: 5px;
+    font-size:10px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(34,193,195) ;
+}
+
+.input-group input:focus{
+    outline:0;
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+}
+#signin{
+    margin-top: 10px;
+}
+.lab{
+    font-size: larger;
+    font-style:normal;
+    text-decoration: solid;
+}
+#register{
+    padding:20px;
+}
+
+body{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(121,32,153,1) 86%);
+    background-attachment: fixed;
+    margin:0px;
+    padding:70px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#form{
+    width:375px;
+    margin:0 auto 0 auto;
+    margin:0px 00px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:25px;
+    margin-left: 400px;
+    margin-top: 0px;
+}
+
+h1{
+    text-align: center;
+    color:#792099;
+}
+
+#form button{
+    background-color: #792099;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:5px;
+    margin:0px 20px 0px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:100%;
+    margin-top: 20px;
+} 
+#form button:disabled{
+    background-color: gray;
+    color:white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding:5px;
+    margin:0px 20px 0px 0px;
+    font-size:20px;
+    width:100%;
+} 
+.input-group{
+    display: flex;
+    gap: 10px;
+    
+}
+input.ng-invalid{
+    border: red,1px,solid;
+}
+.radio-lable{
+    padding: 5px 10px;
+}
+.form-label{
+    width: 45px;
+}
+/* .input-group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+} */
+
+/* .input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(34,193,195) ;
+}
+
+.input-group input:focus{
+    outline:0;
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+} */
+.errormessage{
+    color:red;
+} 
+.form-control{
+    margin-bottom: 20px;
+}

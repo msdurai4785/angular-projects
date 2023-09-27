@@ -1,0 +1,26 @@
+<!-- <app-navbar></app-navbar> -->
+<body>
+    <div class="container">
+        <form  #login="ngForm" action="" id="form" >
+            <h1 id="signin">SignIn</h1>
+        
+        <div class="input-group">
+            <label class="lab" for="name">UserName</label>
+            <input type="text" id="name" #name name="name" placeholder="Name" ngModel>
+        </div>
+       
+        <div class="input-group">
+            <label class="lab" for="passwd">Password</label>
+            <input type="password" id="passwd" #passwd name="passwd" placeholder="Password" ngModel>
+        </div>
+        <button (click)="onLogin(name.value,passwd.value)">Login</button>
+        <div>
+            <br>
+    <p style="font-size: medium;">Create new account? Please <a href="/register">Register</a> </p>
+    <!-- Already have a account? Please <a href="javascript:void(0);",routerLink="/login">Login</a>> -->
+</div>
+</form>
+        </div>
+        </body>
+
+

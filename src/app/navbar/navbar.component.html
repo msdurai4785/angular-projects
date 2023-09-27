@@ -1,0 +1,80 @@
+
+<nav>
+
+  
+   <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'register'">
+        <li><a href="#" routerLink="/register">HOME</a></li>
+        <button style="background-color: rgb(12, 9, 14);"  (click)="cutomerLogin()"> <li><a href="#" routerLink="/login" >CUSTOMER DETAILS </a></li></button>
+        <li><a href="#" routerLink="/login">Login</a></li>
+        </ul>
+        <ul *ngSwitchCase="'reactive'">
+          <li><a href="#" routerLink="/register">HOME</a></li>
+          <button style="background-color: rgb(12, 9, 14);"  (click)="cutomerLogin()"> <li>CUSTOMER DETAILS</li></button>
+          <li><a href="#" routerLink="/login">Login</a></li>
+          </ul>
+        <ul *ngSwitchCase="'login'">
+          <li><a href="#" routerLink="/home">HOME</a></li>
+          <li><a href="#" routerLink="/home">Customer Details</a></li>
+          <li><a href="#" routerLink="/studentdetails">StudentDetails</a></li>
+         <button style="background-color:rgb(18, 17, 17);" (click)="customerLogout()"> <li>Logout</li></button>
+      </ul>
+<ul *ngSwitchCase="'default'">
+  <li><a href="#" routerLink="/register">HOME</a></li>
+  <li><a href="#" routerLink="/register">REGISTER</a></li>
+  <li><a href="#" routerLink="/studentdetails">StudentDetails</a></li>
+  <li><a href="#" routerLink="/login">LOGIN</a></li>
+  <button style="background-color: rgb(12, 9, 14);"  (click)="cutomerLogin()"> <li>CUSTOMER DETAILS </li></button>
+  
+</ul>
+</div>
+<form>
+   <button class="signin" (click)="signin()">SingIn</button>
+  <button class="signup" (click)="signup()">SignUp</button>
+</form>
+</nav>
+
+
+<!-- <mat-toolbar>
+  <mat-toolbar-row style="background-color:coral" class="mat-elevation-z5">
+    <span>Logo</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button><mat-icon class="example-icon"  aria-label="Example heart icon">settings</mat-icon></button>
+    <mat-icon class="example-icon"  aria-label="Example delete icon">home</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [ngSwitch]="menuType" opened>
+    <mat-nav-list *ngSwitchCase="'register'" style="width:200px;height:max-content" style="background-color: rgb(183, 221, 86);">
+     <a mat-list-item routerLink="dashboard1" style="height:96px;"><mat-icon>dashboard</mat-icon> Dashboard</a>
+     <a mat-list-item style="height:96px;"><mat-icon>supervised_user_circle</mat-icon> Student</a>
+     <a mat-list-item style="height:96px;" ><mat-icon>library_books</mat-icon> Staff Details</a>
+     <a mat-list-item style="height:96px;" ><mat-icon>today</mat-icon> Attendence</a>
+     <a mat-list-item style="height:96px;"><mat-icon>feedback</mat-icon> Feedback</a>
+     <a mat-list-item style="height:96px;"><mat-icon>contacts</mat-icon> Contact</a>
+    </mat-nav-list>
+    <mat-nav-list *ngSwitchCase="'reactive'" style="width:200px;height:max-content" style="background-color: rgb(183, 221, 86);">
+      <a mat-list-item routerLink="dashboard1" style="height:96px;"><mat-icon>dashboard</mat-icon> Dashboard</a>
+      <a mat-list-item style="height:96px;"><mat-icon>supervised_user_circle</mat-icon> Student</a>
+      <a mat-list-item style="height:96px;" ><mat-icon>library_books</mat-icon> Staff Details</a>
+     </mat-nav-list>
+     <mat-nav-list *ngSwitchCase="'login'" style="width:200px;height:max-content" style="background-color: rgb(183, 221, 86);">
+      <a mat-list-item routerLink="dashboard1" style="height:96px;"><mat-icon>dashboard</mat-icon> Dashboard</a>
+      <a mat-list-item style="height:96px;"><mat-icon>supervised_user_circle</mat-icon> Student</a>
+     </mat-nav-list>
+     <mat-nav-list *ngSwitchCase="'default'" style="width:200px;height:max-content" style="background-color: rgb(183, 221, 86);">
+      <a mat-list-item href="#" routerLink="/home" style="height:96px;"><mat-icon>dashboard</mat-icon> HOME</a>
+      <a mat-list-item href="#" routerLink="register"><mat-icon>supervised_user_circle</mat-icon> REGISTER</a>
+      <a mat-list-item href="#" routerLink="/dashboard" style="height:96px;"><mat-icon>dashboard</mat-icon> LOGIN</a><br>
+      <button mat-button><a mat-list-item style="height:96px;"><mat-icon>library_books</mat-icon> CUSTOMERDETAILS</a></button>
+      <!-- <a mat-list-item style="height:96px;" ><mat-icon>today</mat-icon> Attendence</a>
+      <a mat-list-item style="height:96px;"><mat-icon>feedback</mat-icon> Feedback</a>
+      <a mat-list-item style="height:96px;"><mat-icon>contacts</mat-icon> Contact</a> -->
+     <!-- </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p style="height:90vh"></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  -->

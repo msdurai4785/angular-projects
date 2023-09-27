@@ -1,0 +1,76 @@
+<!-- <app-navbar></app-navbar> -->
+
+<body>
+
+    <div class="container">
+
+        <form #register="ngForm" (click)="GetFormData(register.value)" action="" id="form">
+
+            <h1>SignUp</h1>
+
+            <div class="input-group">
+
+                <label for="name" class="form-label">Name:</label>
+                <input required minlength="5" class="form-control" type="text" id="name" name="name" #name="ngModel"
+                    placeholder="Username" [(ngModel)]="signupobj.name">
+                <span *ngIf="name.invalid && name.touched " class="errormessage">Please Enter Your Name</span>
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="email">Email:</label>
+                <input required class="form-control" type="email" id="email" email name="email" placeholder="EmailID"
+                    #email="ngModel" [(ngModel)]="signupobj.email">
+                <span *ngIf="email.invalid && email.touched" class="errormessage"> Please Enter Valid Email</span>
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="passwd">Password:</label>
+                <input required class="form-control" type="password" id="passwd" name="passwd" placeholder="Password"
+                    #passwd="ngModel" [(ngModel)]="signupobj.passwd">
+                <span *ngIf="passwd.invalid && passwd.touched" class="errormessage">Please Enter Valid Passwd</span>
+            </div>
+
+            <div class="input-group">
+                <label class="form-label" for="salary">Salary:</label>
+                <input required class="form-control" type="text" id="salary" name="salary" placeholder="Salary"
+                    #salary="ngModel" [(ngModel)]="signupobj.salary">
+                <span *ngIf=" salary.invalid && salary.touched" class="errormessage">Please Enter Valid Salary</span>
+            </div>
+            <div class="radio-group">
+                <label class="radio-lable" for="male">Male:</label>
+                <input type="radio" name="gender" id="male" #male="ngModel" value="male" [(ngModel)]="signupobj.gender">
+                <label class="radio-lable" for="female">Female</label>
+                <input type="radio" name="gender" id="female" #female="ngModel" value="female"
+                    [(ngModel)]="signupobj.gender">
+                <br>
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="country">Country</label>
+                <select name="country" class="form-control" id="country" name="country" placeholder="Country"
+                    #country="ngModel" [ngModel]="dropDown">
+                    <option value="">Choose</option>
+                    <option>Argentina</option>
+                    <option value="India" selected>India</option>
+                    <option>China</option>
+                    <option>Canada</option>
+                    <option>Colombia</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="contact">Contact</label>
+                <input required minlength="10" class="form-control" type="contact" id="contact" name="contact"
+                    placeholder="Contact" #contact="ngModel" [(ngModel)]="signupobj.contact">
+                <span *ngIf=" contact.invalid && contact.touched" class="errormessage">Please Enter Valid Contact</span>
+            </div>
+            <button [disabled]="register.invalid" (click)="onsignup(register)">Signup</button>
+            <br>
+            <div>
+                <p style="font-size: medium;">Already have a account? Please <a href="/login">Login</a> </p>
+                <!-- Already have a account? Please <a href="javascript:void(0);",routerLink="/login">Login</a>> -->
+            </div>
+        </form>
+
+
+    </div>
+
+    <body>

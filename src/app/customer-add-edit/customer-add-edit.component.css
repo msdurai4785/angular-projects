@@ -1,0 +1,162 @@
+/* #register{
+    padding:20px;
+}
+
+
+
+ body{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(121,32,153,1) 86%);
+    margin:0px;
+    padding:40px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+#form{
+    width:100%;
+    margin:20vh auto 0 auto;
+    margin:0px 50px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding:20px;
+    float: left;
+    text-align: left;
+    margin-top: 10px;
+   
+}
+h1{
+    text-align: center;
+    text-decoration:solid;
+    text-transform: capitalize;
+    color:#792099;
+    margin-bottom: 20px;
+}
+
+
+
+.input-group input{
+    border-radius: 5px;
+    font-size:20px;
+    margin-top:5px;
+    padding:10px;
+    border:1px solid rgb(34,193,195) ;
+}
+
+.input-group input:focus{
+    outline:0;
+}
+
+.input-group .error{
+    color:rgb(242, 18, 18);
+    font-size:16px;
+    margin-top: 5px;
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.error input{
+    border-color:rgb(206, 67, 67);
+}
+.errormessage{
+    color:red;
+} 
+
+h1
+{
+    text-align: center;
+    color: blueviolet;
+}
+
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-right: 50px;
+    margin-top: 50px;
+    text-decoration: solid;
+   
+  }
+  
+  #users td, #users th {
+    border: 1px solid #151515;
+    padding: 8px;
+    text-decoration: solid;
+  }
+  
+  #users tr:nth-child(even){background-color: #bad1b3;}
+  #users tr:nth-child(odd){background-color: #f3c258;}
+  
+  
+  #users tr:hover {background-color: #ddd;}
+  
+  #users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(103, 99, 97);
+    color: white;
+    text-decoration: solid;
+  }
+  #submit{
+    background-color: #792099;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:10px;
+    margin:0px 80px 0px 0px;
+    cursor:pointer;
+    font-size:20px;
+    width:75%;
+    margin-left: 50px;
+  }*/
+  #submit{
+    background-color: #792099;
+    color:white;
+    border: 1px solid #792099;
+    border-radius: 5px;
+    padding:5px;
+    margin:0px 80px 0px 0px;
+    cursor:pointer;
+    font-size:10px;
+    /* width:75%; */
+    margin-left: 80px;
+    margin-top: 5px;
+  }
+ .heading{
+    color: blueviolet;
+    text-decoration: solid;
+    margin-left: 20px;
+ }
+
+   .common{
+  height: auto;
+  width: auto;
+  }
+ 
+ /* #frmtable{
+    margin-left: 75px;
+  }
+  .form-control{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
+}
+.input-group{
+    display: flex;
+    gap: 10px;
+    
+}*/
+.radio-lable{
+    padding: 5px 10px;
+}
+.form-label{
+    margin-right: 50px;
+    width: 45px;
+}
+.form-control{
+margin-left: 30px;
+margin-bottom: 5px;
+}

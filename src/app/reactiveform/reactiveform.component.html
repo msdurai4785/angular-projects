@@ -1,0 +1,84 @@
+<!-- <app-navbar></app-navbar> -->
+
+<body>
+    <!-- <div class="container">
+        <h1>ReactiveForm</h1>
+        <form id="form" [formGroup]="contactForm" (submit)="onSubmit()">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input required   type="text" id="name" name="name" placeholder="Username" formControlName="name">
+                <span  *ngIf="!name?.valid && (name?.touched || name?.dirty)">
+                    <span class="text-danger" *ngIf="name?.errors?.['required']">
+                       name is required
+                    </span>
+                    <span class="text-danger" *ngIf="name?.errors?.['minlength']">
+                       Minimum length is 10 Characters
+                    </span>
+                 </span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input required type="email" id="email" name="email" placeholder="EmailID" formControlName="email">
+                <span  *ngIf="!email?.valid && (email?.touched || email?.dirty)">
+                    <span class="text-danger" *ngIf="email?.errors?.['required']">
+                       Email is required
+                    </span>
+                 </span>
+            </div>
+            <div class="input-group">
+                <label for="passwd">Password</label>
+                <input required type="password" id="passwd" name="passwd" placeholder="Password" formControlName="passwd">
+                <span  *ngIf="!passwd?.valid && (passwd?.touched || passwd?.dirty)">
+                    <span class="text-danger" *ngIf="passwd?.errors?.['required']">
+                       Password is required
+                    </span>
+                 </span>
+            </div>
+            <div class="radio">
+                <label for="male">Male</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" id="male" value="male" formControlName="gender">
+                <label for="female">Female</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" id="female" value="female" formControlName="gender">
+            </div>
+            <br>
+            <div class="input-group">
+                <label for="salary">Salary</label>
+                <input required type="text" id="salary" name="salary" placeholder="Salary" formControlName="salary">
+                <span  *ngIf="!salary?.valid && (salary?.touched || salary?.dirty)">
+                    <span class="text-danger" *ngIf="salary?.errors?.['required']">
+                       Salary is required
+                    </span>
+                 </span>
+            </div>
+            <div>
+                <label for="country">Country</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="country" id="country" name="country" placeholder="Country" formControlName="country">
+                    <option value="">Choose</option>
+                    <option>Argentina</option>
+                    <option value="India" selected>India</option>
+                    <option>China</option>
+                    <option>Canada</option>
+                    <option>Colombia</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                </select>
+                <span  *ngIf="!country?.valid && (country?.touched || country?.dirty)">
+                    <span class="text-danger" *ngIf="country?.errors?.['required']">
+                       country is required
+                    </span>
+                 </span>
+            </div><br>
+            <div class="input-group">
+                <label for="contact">Contact</label>
+                <input required minlength="10" type="contact" id="contact" name="contact"
+                    placeholder="Contact" formControlName="contact">
+            </div>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" contactForm="">Signup</button>
+            </p>
+        </form>
+
+    </div> -->
+    <app-login></app-login>
+</body>

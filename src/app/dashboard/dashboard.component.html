@@ -1,0 +1,37 @@
+
+
+
+<h1>Employee's Table</h1>
+<hr>
+
+<table id="users">
+  <tr>
+    <!-- <th *ngFor = "let column of headers">
+      {{column}}
+    </th> -->
+    <th>UserName</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Salary</th>
+    <th>Country</th>
+    <th>Contact</th>
+    <th>Update</th>
+
+  </tr>
+
+  <tr *ngFor = "let row of rows; let i = index">
+    <!-- <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td> -->
+    <td>{{row.username}}</td>
+    <td>{{row.gender}}</td>
+    <td>{{row.email}}</td>
+    <td>{{row.salary}}</td>
+    <td>{{row.country}}</td>
+    <td>{{row.contact}}</td>
+    <td><button (click)="updateUserData(i)">Update</button></td>
+  </tr>
+
+</table>
+<app-update *ngIf="updateUser" [updateNew]="userData" [indexVal]="indexValue"></app-update>
+<!-- <app-edit [userdata]="userdata"></app-edit> -->

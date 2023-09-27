@@ -1,0 +1,36 @@
+
+
+<body>
+
+    <div class="container">
+
+        <form #register="ngForm" action="" id="form">
+            
+            <h1>Update User Details</h1>
+            <div class="input-group">
+                <label for="name" class="form-label">Name</label>
+                <input required class="form-control" type="text" id="name" name="name" placeholder="name" #name="ngModel" [(ngModel)]="updateNew.username">
+                <!-- <span *ngIf="name.invalid && name.dirty "  class="errormessage"></span> -->
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="email">Email</label>
+                <input required class="form-control" type="email" id="email" name="email" placeholder="EmailID" #email="ngModel" [(ngModel)]="updateNew.email">
+                    <!-- <span *ngIf="email.invalid && email.touched" class="errormessage"> Please Enter Valid Email</span> -->
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="salary">Salary</label>
+                <input required class="form-control" type="text" id="salary" name="salary" placeholder="Salary"#salary="ngModel" [(ngModel)]="updateNew.salary">
+                    <!-- <span *ngIf=" salary.invalid && salary.touched" class="errormessage">Please Enter Valid Salary</span> -->
+            </div>
+            <div class="input-group">
+                <label class="form-label" for="contact">Contact</label>
+                <input required minlength="10" class="form-control" type="contact" id="contact" name="contact" placeholder="Contact" #contact="ngModel" [(ngModel)]="updateNew.contact">
+                    <!-- <span *ngIf=" contact.invalid && contact.touched" class="errormessage">Please Enter Valid Contact</span> -->
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="updateData(register)">Update</button>
+    </form>
+        
+
+    </div>
+
+    <body>
